@@ -1,0 +1,56 @@
+{
+  "system": "SNBC_STACK",
+  "mode": "bare_metal",
+  "cron_schedule": "@daily",
+
+  "api_keys": {
+    "openai": "PASTE_OPENAI_API_KEY_HERE",
+    "virustotal": "PASTE_VIRUSTOTAL_API_KEY_HERE",
+    "shodan": "PASTE_SHODAN_API_KEY_HERE"
+  },
+
+  "mail_config": {
+    "provider": "resend",
+    "mail_api_key": "PASTE_RESEND_API_KEY_HERE",
+    "from_email": "you@yourdomain.com",
+    "target_list": ["client1@example.com", "client2@example.com"]
+  },
+
+  "reporting": {
+    "template": "template_2",
+    "output_dir": "/opt/snbc/dashboards",
+    "include_entropy": true
+  },
+
+  "funnel": {
+    "use_ab_test": true,
+    "cta": "Start Your Risk Audit",
+    "price_point": "$197",
+    "embed_video": true,
+    "landing_page_dir": "/opt/snbc/funnels"
+  },
+
+  "video": {
+    "record_via_obs": true,
+    "obs_websocket_url": "ws://localhost:4455",
+    "obs_password": "inn1Ercircle",
+    "video_output_path": "/opt/snbc/video_output"
+  },
+
+  "fallback": {
+    "biometrics_mode": "manual_input",
+    "health_defaults": {
+      "fatigue": 2,
+      "stress": 3,
+      "sleep_hours": 6
+    }
+  },
+
+  "security": {
+    "log_path": "/opt/snbc/logs",
+    "fail_on_token_mismatch": true,
+    "encrypt_reports": false
+  },
+
+  "signature": "GLaDOS v5.1 – Tactical AI for cowards"
+}
